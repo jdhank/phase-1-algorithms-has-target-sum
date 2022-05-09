@@ -1,6 +1,14 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let i = 0; i < array.length; i++){
+  const complement = target - array [i];
+  for (let j = i + 1; j < array.length; j++){
+    if(array[j] === complement)return true;
+  } 
 }
+return false
+  }
+
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,6 +16,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  add 2 items together, divide by 2, then check if it's === target
+  if not check next item
+  return true or false 
 */
 
 /*
